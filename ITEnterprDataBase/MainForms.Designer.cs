@@ -46,6 +46,7 @@
             this.numberPalletStorno = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.buttExit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -287,12 +288,24 @@
             this.pictureBox1.TabIndex = 22;
             this.pictureBox1.TabStop = false;
             // 
+            // buttExit
+            // 
+            this.buttExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttExit.Location = new System.Drawing.Point(700, 620);
+            this.buttExit.Name = "buttExit";
+            this.buttExit.Size = new System.Drawing.Size(100, 40);
+            this.buttExit.TabIndex = 23;
+            this.buttExit.Text = "Вихід";
+            this.buttExit.UseVisualStyleBackColor = true;
+            this.buttExit.Click += new System.EventHandler(this.buttExit_Click);
+            // 
             // MainForms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(876, 709);
+            this.Controls.Add(this.buttExit);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.numberPalletStorno);
@@ -341,5 +354,6 @@
         private System.Windows.Forms.TextBox numberPalletStorno;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button buttExit;
     }
 }

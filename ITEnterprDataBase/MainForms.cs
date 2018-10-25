@@ -55,5 +55,10 @@ namespace ITEnterprDataBase
         {
             chekNumberInput(e);
         }
+
+        private void buttExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
