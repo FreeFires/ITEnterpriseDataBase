@@ -17,15 +17,6 @@ namespace ITEnterprDataBase
             InitializeComponent();
         }
 
-        public void chekNumberInput(KeyPressEventArgs e) //Использование в поле только цифр и клавиши Backspace
-        {
-            char num = e.KeyChar;
-            if (!Char.IsDigit(num) && num != 8)
-            {
-                e.Handled = true;
-            }
-        }
-
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
 
@@ -38,7 +29,8 @@ namespace ITEnterprDataBase
 
         private void numberPallet_KeyPress(object sender, KeyPressEventArgs e)
         {
-            chekNumberInput(e);
+            CheckInputNum checkInputNum = new CheckInputNum();
+            checkInputNum.checkInputNumber(e);
         }
 
         private void MainForms_FormClosed(object sender, FormClosedEventArgs e)
@@ -48,17 +40,31 @@ namespace ITEnterprDataBase
 
         private void numberPalletPogruz_KeyPress(object sender, KeyPressEventArgs e)
         {
-            chekNumberInput(e);
+            CheckInputNum checkInputNum = new CheckInputNum();
+            checkInputNum.checkInputNumber(e);
         }
 
         private void numberPalletStorno_KeyPress(object sender, KeyPressEventArgs e)
         {
-            chekNumberInput(e);
+            CheckInputNum checkInputNum = new CheckInputNum();
+            checkInputNum.checkInputNumber(e);
         }
 
         private void buttExit_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void buttTestMPK14_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnBackPassForm_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            PassForm passForm = new PassForm();
+            passForm.Show();
         }
     }
 }

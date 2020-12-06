@@ -19,7 +19,8 @@ namespace ITEnterprDataBase
             SqlConnection sqlConnection = new SqlConnection(connectionString);
             await sqlConnection.OpenAsync();
         }*/
-        public static String connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Work\Projects\CSharp\ITEnterprDataBase\ITEnterprDataBase\TestDB.mdf;Integrated Security=True;Connect Timeout=30";
+        //public static String connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Work\Projects\CSharp\ITEnterprDataBase\ITEnterprDataBase\TestDB.mdf;Integrated Security=True;Connect Timeout=30";
+        public static String connectionString = @"Data Source=legko.database.windows.net;Initial Catalog=LegkoDB;User ID=legko;Password=mzipf2005!";
 
         private static Boolean chekCconnection()
         {
@@ -50,6 +51,32 @@ namespace ITEnterprDataBase
             }
         }
 
+        public static Boolean checkConn() 
+        {
+            Boolean isConnectionExist = false;
+            //DBConnection dBConnection = new DBConnection();
+            SqlConnection sqlConnection = new SqlConnection(connectionString);
+            try
+            {
+                sqlConnection.Open();
+                isConnectionExist = true;
+                MessageBox.Show("Успішне з'єднання з БД");
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Відсутне з'єднання з БД" + ex);
+                isConnectionExist = false;
+            }
+            if (isConnectionExist)
+            { 
+                return true; 
+            }
+            else 
+            {
+                return false;
+            }
+        }
+
         public PassForm()
         {
             InitializeComponent();
@@ -57,24 +84,51 @@ namespace ITEnterprDataBase
 
         private void login_Click(object sender, EventArgs e)
         {
-            //dbConnect();
-            //SqlCommand command = new SqlCommand("SELECT n_kdk FROM [sppm]");
+            //SqlConnection connection = new SqlConnection(connectionString);
+            //connection.Open();
 
-            this.Hide();
-            MainForms mainForms = new MainForms();
-            mainForms.Show();
-            //ShowDialog(passInputText.Text);
-            //this.Close();
+            //string loginPass = passInputField.Text;
+
+            //SqlCommand command = connection.CreateCommand();
+            //command.CommandText = "SELECT n_kdk FROM sppm WHERE cpassword = 'loginPass'";
+            //SqlDataReader reader = command.ExecuteReader();
+            //if (reader.Read())
+            //{
+                this.Hide();
+                MainForms mainForms = new MainForms();
+                mainForms.Show();
+                //ShowDialog(passInputText.Text);
+                //this.Close();
+            //}
+            //else
+            //{
+              //  MessageBox.Show("Невірний пароль!");
+            //}
         }
 
         private void ChekDBConnect_Click(object sender, EventArgs e)
         {
             chekCconnection();
+            //checkConn();
         }
 
         private void PassForm_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            //Додати умову, якщо выдкрите зэдання, його потрыбно закрити
+            
+            Application.Exit();
+
+        }
+
+        private void passInputText_KeyPass(object sender, KeyPressEventArgs e)
+        {
+            CheckInputNum checkInputNum = new CheckInputNum();
+            checkInputNum.checkInputNumber(e);
         }
     }   
 }

@@ -47,6 +47,8 @@
             this.button3 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.buttExit = new System.Windows.Forms.Button();
+            this.buttTestMPK14 = new System.Windows.Forms.Button();
+            this.btnBackPassForm = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -83,10 +85,12 @@
             this.numberPallet.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.numberPallet.Location = new System.Drawing.Point(310, 71);
+            this.numberPallet.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.numberPallet.Location = new System.Drawing.Point(302, 66);
             this.numberPallet.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.numberPallet.MaxLength = 5;
             this.numberPallet.Name = "numberPallet";
-            this.numberPallet.Size = new System.Drawing.Size(148, 26);
+            this.numberPallet.Size = new System.Drawing.Size(156, 35);
             this.numberPallet.TabIndex = 2;
             this.numberPallet.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.numberPallet_KeyPress);
             // 
@@ -123,6 +127,7 @@
             this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "30020 - Уч. маруваня",
@@ -134,7 +139,7 @@
             this.comboBox1.Location = new System.Drawing.Point(46, 238);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(252, 28);
+            this.comboBox1.Size = new System.Drawing.Size(252, 37);
             this.comboBox1.TabIndex = 5;
             // 
             // label9
@@ -170,10 +175,12 @@
             this.numberPalletPogruz.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.numberPalletPogruz.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.numberPalletPogruz.Location = new System.Drawing.Point(340, 242);
             this.numberPalletPogruz.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.numberPalletPogruz.MaxLength = 5;
             this.numberPalletPogruz.Name = "numberPalletPogruz";
-            this.numberPalletPogruz.Size = new System.Drawing.Size(148, 26);
+            this.numberPalletPogruz.Size = new System.Drawing.Size(148, 35);
             this.numberPalletPogruz.TabIndex = 14;
             this.numberPalletPogruz.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.numberPalletPogruz_KeyPress);
             // 
@@ -196,6 +203,7 @@
             this.comboBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Items.AddRange(new object[] {
             "30020 - Уч. маруваня",
@@ -207,7 +215,7 @@
             this.comboBox2.Location = new System.Drawing.Point(526, 242);
             this.comboBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(252, 28);
+            this.comboBox2.Size = new System.Drawing.Size(252, 37);
             this.comboBox2.TabIndex = 15;
             this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
@@ -216,7 +224,7 @@
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.Location = new System.Drawing.Point(526, 283);
+            this.button2.Location = new System.Drawing.Point(526, 296);
             this.button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(252, 35);
@@ -257,10 +265,12 @@
             this.numberPalletStorno.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.numberPalletStorno.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.numberPalletStorno.Location = new System.Drawing.Point(310, 388);
             this.numberPalletStorno.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.numberPalletStorno.MaxLength = 8;
             this.numberPalletStorno.Name = "numberPalletStorno";
-            this.numberPalletStorno.Size = new System.Drawing.Size(148, 26);
+            this.numberPalletStorno.Size = new System.Drawing.Size(148, 35);
             this.numberPalletStorno.TabIndex = 20;
             this.numberPalletStorno.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.numberPalletStorno_KeyPress);
             // 
@@ -269,7 +279,7 @@
             this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.Location = new System.Drawing.Point(486, 385);
+            this.button3.Location = new System.Drawing.Point(495, 388);
             this.button3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(156, 35);
@@ -293,11 +303,32 @@
             this.buttExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttExit.Location = new System.Drawing.Point(700, 620);
             this.buttExit.Name = "buttExit";
-            this.buttExit.Size = new System.Drawing.Size(100, 40);
+            this.buttExit.Size = new System.Drawing.Size(158, 77);
             this.buttExit.TabIndex = 23;
             this.buttExit.Text = "Вихід";
             this.buttExit.UseVisualStyleBackColor = true;
             this.buttExit.Click += new System.EventHandler(this.buttExit_Click);
+            // 
+            // buttTestMPK14
+            // 
+            this.buttTestMPK14.Location = new System.Drawing.Point(486, 120);
+            this.buttTestMPK14.Name = "buttTestMPK14";
+            this.buttTestMPK14.Size = new System.Drawing.Size(156, 34);
+            this.buttTestMPK14.TabIndex = 24;
+            this.buttTestMPK14.Text = "Тест палети";
+            this.buttTestMPK14.UseVisualStyleBackColor = true;
+            this.buttTestMPK14.Click += new System.EventHandler(this.buttTestMPK14_Click);
+            // 
+            // btnBackPassForm
+            // 
+            this.btnBackPassForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnBackPassForm.Location = new System.Drawing.Point(48, 620);
+            this.btnBackPassForm.Name = "btnBackPassForm";
+            this.btnBackPassForm.Size = new System.Drawing.Size(158, 77);
+            this.btnBackPassForm.TabIndex = 25;
+            this.btnBackPassForm.Text = "Назад";
+            this.btnBackPassForm.UseVisualStyleBackColor = true;
+            this.btnBackPassForm.Click += new System.EventHandler(this.btnBackPassForm_Click);
             // 
             // MainForms
             // 
@@ -305,6 +336,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(876, 709);
+            this.Controls.Add(this.btnBackPassForm);
+            this.Controls.Add(this.buttTestMPK14);
             this.Controls.Add(this.buttExit);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button3);
@@ -355,5 +388,7 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button buttExit;
+        private System.Windows.Forms.Button buttTestMPK14;
+        private System.Windows.Forms.Button btnBackPassForm;
     }
 }

@@ -30,10 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PassForm));
             this.label1 = new System.Windows.Forms.Label();
-            this.passInputText = new System.Windows.Forms.TextBox();
+            this.passInputField = new System.Windows.Forms.TextBox();
             this.passInputButton = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.chekDBConnect = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,18 +51,20 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Введіть пароль:";
             // 
-            // passInputText
+            // passInputField
             // 
-            this.passInputText.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.passInputField.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.passInputText.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.passInputText.Location = new System.Drawing.Point(326, 274);
-            this.passInputText.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.passInputText.Multiline = true;
-            this.passInputText.Name = "passInputText";
-            this.passInputText.PasswordChar = '*';
-            this.passInputText.Size = new System.Drawing.Size(246, 61);
-            this.passInputText.TabIndex = 1;
+            this.passInputField.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.passInputField.Location = new System.Drawing.Point(326, 274);
+            this.passInputField.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.passInputField.MaxLength = 8;
+            this.passInputField.Multiline = true;
+            this.passInputField.Name = "passInputField";
+            this.passInputField.PasswordChar = '*';
+            this.passInputField.Size = new System.Drawing.Size(246, 61);
+            this.passInputField.TabIndex = 1;
+            this.passInputField.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.passInputText_KeyPass);
             // 
             // passInputButton
             // 
@@ -96,21 +99,36 @@
             this.chekDBConnect.UseVisualStyleBackColor = true;
             this.chekDBConnect.Click += new System.EventHandler(this.ChekDBConnect_Click);
             // 
+            // btnClose
+            // 
+            this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnClose.Location = new System.Drawing.Point(732, 617);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(126, 58);
+            this.btnClose.TabIndex = 5;
+            this.btnClose.Text = "Вихід";
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
             // PassForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(876, 709);
+            this.Controls.Add(this.btnClose);
             this.Controls.Add(this.chekDBConnect);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.passInputButton);
-            this.Controls.Add(this.passInputText);
+            this.Controls.Add(this.passInputField);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MaximizeBox = false;
             this.Name = "PassForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Вхід в БД IT Підприємство";
             this.Load += new System.EventHandler(this.PassForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -122,10 +140,11 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox passInputText;
+        private System.Windows.Forms.TextBox passInputField;
         private System.Windows.Forms.Button passInputButton;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button chekDBConnect;
+        private System.Windows.Forms.Button btnClose;
     }
 }
 

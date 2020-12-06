@@ -60,6 +60,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CheckInputNum.cs" />
+    <Compile Include="DBConnection.cs" />
     <Compile Include="DDEDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -132,6 +134,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>TestDB.mdf</DependentUpon>
     </Content>
+    <Content Include="ToDo.txt" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
